@@ -1,0 +1,351 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    color: #1c1c1c;
+}
+
+h1, h2, h3 {
+    font-family: 'Nunito', sans-serif;
+    color: #000000;
+}
+
+.titulo {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2em;
+    padding-top: 4%;
+}
+
+.botao {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #201b2c;
+    font-size: 1em;
+    border-radius: 10px;
+}
+
+
+button:hover, button:focus {
+    border-color: #201b2c;
+    color: #FFFFFF;
+}
+
+.botao:hover,
+.botao:focus {
+    box-shadow: 0em 0em 1.2em -0.1em  #00ff88;
+    transform: translateY(-0.25em);
+    transition-duration: 2s;
+    transition: 0.3s;
+}
+
+/* Navegação */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #201b2c;
+}
+
+nav > a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 800px;
+    font-size: 32px;
+    font-family: 'Nunito', sans-serif;
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li {
+    text-align: center;
+    width: 100%;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 8px 0;
+    width: 70%;
+    height: 100%;
+    text-decoration: none;
+    color: #FFFFFF
+}
+
+nav ul li a:hover {
+    background-color: #00ff88;
+    color: #201b2c;
+    border-radius: 10px;
+    transition-duration: 2s;
+    transition: 0.4s;
+}
+
+/*Cabeçalho*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../img/estudo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.titulo {
+    color: #FFFFFF;
+    font-size: 48px;
+}
+
+header p {
+    margin-bottom: 3.3em;
+}
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 10px 20px 20px;
+    background-color: #201b2c;
+    color: #FFFFFF;
+}
+
+#sobre h2 {
+    color: #FFFFFF;
+}
+
+#sobre p {
+    margin-bottom: 2.5em;
+    max-width: 1000px;
+}
+
+#sobre .botao {
+    background-color: #f1f1f1;
+    color: #1c1c1c;
+}
+
+/*matérias*/
+
+#materias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+#materias h2 {
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+#materias img {
+    width: 100%;
+}
+
+#materias a img:hover {
+    box-shadow: 0em 0em 1.6em -0.1em  #00ff88;
+    transform: translateY(-0.25em);
+
+    transition: 0.4s;
+}
+
+/* Provas */
+
+#provas {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    background-color: #201b2c;
+}
+
+#provas h1, h2 {
+    color: #FFFFFF;
+}
+
+#provas a {
+    color: #00ff88;
+    background-color: #2f2841;
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+#provas a:hover {
+    box-shadow: 0em 0em 1.6em -0.1em  #00ff88;
+    transform: translateY(-0.20em);
+    width: 104px;
+    transition: 0.4s;
+}
+
+#provas #ssa div{
+    display: inline-block;
+    margin: 50px;
+}
+
+#provas #ssa2 div{
+    display:inline-block;
+    margin: 50px;
+}
+
+/*contato*/
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+#contato h2 {
+    color: #000000;
+}
+
+#contato a {
+    color: #00ff88;
+    text-decoration: none;
+}
+
+#contato a:hover,
+#contato a:focus {
+    box-shadow: 0em 0em 1.2em -0.1em  #00ff88;
+    transform: translateY(-0.25em);
+    transition-duration: 2s;
+    transition: 0.3s;
+}
+
+/*rodapé*/
+
+footer {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    padding: 10px;
+    background-color: #201b2c;
+    color: #FFFFFF;
+}
+
+footer a {
+    text-decoration: none;
+    color: #00ff88;
+}
+
+@media screen and (min-width: 768px) {
+
+    /*nav*/
+    nav {
+        top: 0;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav ul {
+        flex-direction: row;
+        width: 70%;
+    }
+
+    /*cabeçalho*/
+
+    header {
+        height: 600px;
+        height: 60vh;
+        justify-content: center;
+    }
+    /*sobre*/
+    #sobre {
+        font-family: 'Nunito', sans-serif;
+        height: 250px;
+        height: 30vh;
+        justify-content: center;
+        min-height: 250px;
+    }
+
+    /*materias*/
+    #materias {
+        padding-left: 8.55%;
+        display: inline-block;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #materias h2 {
+        width: 100%;
+        text-align: center;
+        padding-right: 10%;
+    }
+
+    #materias img {
+        border-radius: 30px;
+        border-style:groove;
+        width:  30%;
+    }
+    /*contato*/
+    #contato {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    #contato h2, #contato p {
+        font-family: 'Nunito', sans-serif;
+        width: 109%;
+    }
+
+    #contato img {
+        padding-left: 9px
+    }
+
+    
+}
+
+/* Se eu remover esse código, ele remove a cor da logo "Social Study" na navbar, e deixa as fotos que eu fiz no canva com uma borda roxa*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+body {
+    margin: 0;
+    font-family:"Noto Sans", sans-serif; 
+
+    
+}
+
+body a {
+    color: #00ff88;
+    cursor: pointer;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+/*Se remover esse código abaixo, ele quebra os botões/links dentro da tela de cada matéria, e o background do rodapé (número, email e etc) da página inicial*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+body {
+    margin: 0;
+    font-family:"Noto Sans", sans-serif; 
+
+}
+body * {
+    box-sizing: border-box;
+}
+
+div a {
+    color: #77ffc0;
+    background-color: #2f2841;
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+}
