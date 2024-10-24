@@ -14,13 +14,13 @@
 <body>
 
   <nav>
-      <a href="index.html">Social Study</a>
+      <a href="/">Social Study</a>
       <ul>
         <li> <a href="#sobre">Sobre</a></li>
         <li> <a href="#materias">Disciplinas</a></li>
         <li> <a href="#contato">Contato</a></li>
-        <li> <a href="provas.html">Provas anteriores</a></li>
-        <li> <a href="login.html">Login</a></li>
+        <li> <a href="\provas">Provas anteriores</a></li>
+        <li> <a href="\login">Login</a></li>
       </ul>
   </nav>
 
@@ -41,15 +41,15 @@
 
       <section id="materias">
         <h2>Escolha a disciplina e veja os assuntos mais cobrados no ENEM e SSA.</h2>
-        <a href="matematica.html"> <img src="\img\matematica.jpeg" alt="Matemática"></a>
-        <a href="portugues.html"> <img src="img\portugues.jpeg" alt="Português"></a>
-        <a href="historia.html"> <img src="img\historia.jpeg" alt="História"></a>
-        <a href="geografia.html"> <img src="img\geografia.jpeg" alt="Geografia"></a>
-        <a href="fisica.html"> <img src="img\fisica.jpeg" alt="Física"></a>
-        <a href="quimica.html"> <img src="img\quimica.jpeg" alt="Química"></a>
-        <a href="biologia.html"> <img src="img\biologia.jpeg" alt="Biologia"></a>
-        <a href="filosofia.html"> <img src="img\filosofia.jpeg" alt="Filosofia"></a>
-        <a href="sociologia.html"> <img src="img\sociologia.jpeg" alt="Sociologia"></a>
+        <a href="\matematica"> <img src="\img\matematica.jpeg" alt="Matemática"></a>
+        <a href="\portugues"> <img src="img\portugues.jpeg" alt="Português"></a>
+        <a href="\historia"> <img src="img\historia.jpeg" alt="História"></a>
+        <a href="\geografia"> <img src="img\geografia.jpeg" alt="Geografia"></a>
+        <a href="\fisica"> <img src="img\fisica.jpeg" alt="Física"></a>
+        <a href="\quimica"> <img src="img\quimica.jpeg" alt="Química"></a>
+        <a href="\biologia"> <img src="img\biologia.jpeg" alt="Biologia"></a>
+        <a href="\filosofia"> <img src="img\filosofia.jpeg" alt="Filosofia"></a>
+        <a href="\sociologia"> <img src="img\sociologia.jpeg" alt="Sociologia"></a>
       </section>
 
       <section id="contato">
