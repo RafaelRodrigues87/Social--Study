@@ -26,20 +26,24 @@
             <div class="card-login">
                 <h1>CADASTRO</h1>
                     <a href="\">Voltar</a>
-                <div class="textfield">
-                    <label for="first-name">Nome</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
-                </div>
+                    <form action="{{ route('user.store') }}" method="POST">
+                    @csrf
+                    <div class="textfield">
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" placeholder="name" required>
+                    </div>
 
+                    <div class="textfield">
+                        <label for="last-name">Email</label>
+                        <input type="email" name="email" placeholder="email" required>
+                </div>
                 <div class="textfield">
-                    <label for="last-name">Email</label>
-                    <input type="text" name="email" placeholder="Email">
-            </div>
-            <div class="textfield">
-                <label for="password">Senha</label>
-                <input type="password" name="senha" placeholder="Senha">
-             </div>
-             <button class="btn-register">Cadastrar</button>
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" placeholder="Senha" required>
+                </div>
+                <input  type="submit" class="btn btn-primary" value="Cadastrar">
+             </form>
+             
     </div>
 
 </body>

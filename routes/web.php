@@ -1,7 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
+#rotas que envia dados pro banco
+Route::post('/cadastro', [UserController::class, 'store'])->name('user.store');
+
+
+
+
+
+#rotas das paginas
 Route::get('/', function () {
     return view('index');
 });
@@ -36,9 +45,9 @@ Route::get('/geografia', function () {
     return view('geografia');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+// Route::get('/login', function () {
+//     return view('login');
+// });
 
 Route::get('/provas', function () {
     return view('provas');
@@ -51,3 +60,8 @@ Route::get('/quimica', function () {
 Route::get('/sociologia', function () {
     return view('sociologia');
 });
+
+Route::get('/login', function () {
+    return view('login');
+});
+

@@ -35,23 +35,27 @@
 
                 <a href="\">Voltar</a>
 
-                <div class="erro">
-                    <p>ERRO: Usuário ou senha inválidos.</p>
-                </div>
+                
+                    @if ($errors->any())
+                        <div class="erro">
+                            <p>ERRO: Usuário ou senha inválidos.</p>
+                        </div>
+                    @endif
 
-                <div class="textfield">
-                    <label for="usurario">Email</label>
-                    <input type="text" name="usuario" placeholder="Email">
-                </div>
+                    <div class="textfield">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
 
-                <div class="textfield">
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
-                </div>
+                    <div class="textfield">
+                        <label for="password">Senha</label>
+                        <input type="password" name="password" placeholder="Senha">
+                    </div>
+                
 
                 <!--Adicionei esse "onclick" para quando clicar em "Entrar", ele levar para a página inicial do site. Então isso é uma questão temporária, pois é necessário bem mais script's para lidar com isso e validar se o login está correto.-->
-                <button class="btn-login" onclick="window.location.href='index.html'">Entrar</button>
-                <a href ="\cadastro">Ainda não é inscrito? <strong>Cadastre-se!</strong></a>
+                <button type="submit" class="btn-primary">Entrar</button>
+                <a href ="/cadastro">Ainda não é inscrito? <strong>Cadastre-se!</strong></a>
 
             </div>
 
