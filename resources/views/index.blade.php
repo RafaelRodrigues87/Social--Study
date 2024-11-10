@@ -20,7 +20,19 @@
         <li> <a href="#materias">Disciplinas</a></li>
         <li> <a href="#contato">Contato</a></li>
         <li> <a href="\provas">Provas anteriores</a></li>
-        <li> <a href="\login">Login</a></li>
+        @if (auth()->check())
+        <li class="user-profile">
+                <a href="">Olá, {{ auth()->user()->name }}!</a>
+                <form action="{{ route('logout') }}" method="POST" class="logout-form">
+                    @csrf
+                    <button type="submit" class="logout-button">Sair</button>
+                </form>
+        @else
+          li> <a href="\login">Login</a></li>
+        
+        
+        @endif
+        
       </ul>
   </nav>
 
@@ -35,21 +47,21 @@
   <section id="sobre">
 
       <h2>Sobre</h2>
-      <p>A partir do trabalho de conclusão de curso da Escola Técnica Estadual Jurandir Berreza Lins, nossa equipe desenvolveu um site onde o maior objetivo é auxiliar os estudantes na busca de conteúdo para estudo. </p>
+      <p>Somos um grupo de estudantes da Uninassau, desenvolvendo um projeto para oferecer materiais gratuitos e de qualidade para ajudar na preparação para vestibulares. Nosso objetivo é facilitar o acesso ao conhecimento e contribuir para o sucesso acadêmico, independentemente da condição financeira dos estudantes.<p>
       <a href="#contato" class="botao"> Contate Agora </a>
   </section>
 
       <section id="materias">
         <h2>Escolha a disciplina e veja os assuntos mais cobrados no ENEM e SSA.</h2>
-        <a href="\matematica"> <img src="\img\matematica.jpeg" alt="Matemática"></a>
-        <a href="\portugues"> <img src="img\portugues.jpeg" alt="Português"></a>
-        <a href="\historia"> <img src="img\historia.jpeg" alt="História"></a>
-        <a href="\geografia"> <img src="img\geografia.jpeg" alt="Geografia"></a>
-        <a href="\fisica"> <img src="img\fisica.jpeg" alt="Física"></a>
-        <a href="\quimica"> <img src="img\quimica.jpeg" alt="Química"></a>
-        <a href="\biologia"> <img src="img\biologia.jpeg" alt="Biologia"></a>
-        <a href="\filosofia"> <img src="img\filosofia.jpeg" alt="Filosofia"></a>
-        <a href="\sociologia"> <img src="img\sociologia.jpeg" alt="Sociologia"></a>
+        <a href="\login"> <img src="\img\matematica.jpeg" alt="Matemática"></a>
+        <a href="\login"> <img src="img\portugues.jpeg" alt="Português"></a>
+        <a href="\login"> <img src="img\historia.jpeg" alt="História"></a>
+        <a href="\login"> <img src="img\geografia.jpeg" alt="Geografia"></a>
+        <a href="\login"> <img src="img\fisica.jpeg" alt="Física"></a>
+        <a href="\login"> <img src="img\quimica.jpeg" alt="Química"></a>
+        <a href="\login"> <img src="img\biologia.jpeg" alt="Biologia"></a>
+        <a href="\login"> <img src="img\filosofia.jpeg" alt="Filosofia"></a>
+        <a href="\login"> <img src="img\sociologia.jpeg" alt="Sociologia"></a>
       </section>
 
       <section id="contato">

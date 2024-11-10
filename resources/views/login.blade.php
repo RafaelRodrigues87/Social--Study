@@ -35,27 +35,29 @@
 
                 <a href="\">Voltar</a>
 
-                
-                    @if ($errors->any())
-                        <div class="erro">
-                            <p>ERRO: Usuário ou senha inválidos.</p>
+                <form action="{{ route('login') }}" method="POST">
+                        @csrf   
+                        @if ($errors->any())
+                            <div class="erro">
+                                <p>ERRO: Usuário ou senha inválidos.</p>
+                            </div>
+                        @endif
+
+                        <div class="textfield">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" placeholder="Email">
                         </div>
-                    @endif
 
-                    <div class="textfield">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" placeholder="Email">
-                    </div>
+                        <div class="textfield">
+                            <label for="password">Senha</label>
+                            <input type="password" name="password" placeholder="Senha">
+                        </div>
+                    
 
-                    <div class="textfield">
-                        <label for="password">Senha</label>
-                        <input type="password" name="password" placeholder="Senha">
-                    </div>
-                
-
-                <!--Adicionei esse "onclick" para quando clicar em "Entrar", ele levar para a página inicial do site. Então isso é uma questão temporária, pois é necessário bem mais script's para lidar com isso e validar se o login está correto.-->
-                <button type="submit" class="btn-primary">Entrar</button>
-                <a href ="/cadastro">Ainda não é inscrito? <strong>Cadastre-se!</strong></a>
+                    <!--Adicionei esse "onclick" para quando clicar em "Entrar", ele levar para a página inicial do site. Então isso é uma questão temporária, pois é necessário bem mais script's para lidar com isso e validar se o login está correto.-->
+                    <button type="submit" class="btn-primary">Entrar</button><br>   
+                    <a href ="/cadastro">Ainda não é inscrito? <strong>Cadastre-se!</strong></a>
+                </form>
 
             </div>
 
