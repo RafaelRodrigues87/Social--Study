@@ -30,16 +30,16 @@
                     @csrf
                     <div class="textfield">
                         <label for="name">Nome</label>
-                        <input type="text" name="name" placeholder="name" required>
+                        <input type="text" name="name" placeholder="Digite seu nome" required>
                     </div>
 
                     <div class="textfield">
                         <label for="last-name">Email</label>
-                        <input type="email" name="email" placeholder="email" required>
+                        <input type="email" name="email" placeholder="Digite seu email" required>
                 </div>
                 <div class="textfield">
                     <label for="password">Senha</label>
-                    <input type="password" name="password" placeholder="Senha" required>
+                    <input type="password" name="password" placeholder="Digite sua senha" required>
                 </div>
                 <input  type="submit" class="btn btn-primary" value="Cadastrar">
              </form>

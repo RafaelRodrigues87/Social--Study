@@ -39,7 +39,7 @@
                         @csrf   
                         @if ($errors->any())
                             <div class="erro">
-                                <p>ERRO: Usuário ou senha inválidos.</p>
+                                <p style="color: red;">ERRO: Usuário ou senha inválidos.</p>
                             </div>
                         @endif
 
@@ -56,7 +56,7 @@
 
                     <!--Adicionei esse "onclick" para quando clicar em "Entrar", ele levar para a página inicial do site. Então isso é uma questão temporária, pois é necessário bem mais script's para lidar com isso e validar se o login está correto.-->
                     <button type="submit" class="btn-primary">Entrar</button><br>   
-                    <a href ="/cadastro">Ainda não é inscrito? <strong>Cadastre-se!</strong></a>
+                    <a href ="/cadastro" id='cadastre'>Ainda não é inscrito? <strong>Cadastre-se!</strong></a>
                 </form>
 
             </div>

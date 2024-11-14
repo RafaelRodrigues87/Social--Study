@@ -13,7 +13,18 @@
 </head>
 <body>
 
-  <nav>
+
+
+@if (session('message'))
+    <div class="alert-success-custom"  id="success-message">
+        {{ session('message') }}
+    </div>
+@endif
+
+
+   
+
+<nav>
       <a href="/">Social Study</a>
       <ul>
         <li> <a href="#sobre">Sobre</a></li>
@@ -28,7 +39,7 @@
                     <button type="submit" class="logout-button">Sair</button>
                 </form>
         @else
-          li> <a href="\login">Login</a></li>
+          <li> <a href="\login">Login</a></li>
         
         
         @endif
@@ -51,6 +62,21 @@
       <a href="#contato" class="botao"> Contate Agora </a>
   </section>
 
+    @if (auth()->check())
+      <section id="materias">
+        <h2>Escolha a disciplina e veja os assuntos mais cobrados no ENEM e SSA.</h2>
+        <a href="\matematica"> <img src="\img\matematica.jpeg" alt="Matemática"></a>
+        <a href="\portugues"> <img src="img\portugues.jpeg" alt="Português"></a>
+        <a href="\historia"> <img src="img\historia.jpeg" alt="História"></a>
+        <a href="\geografia"> <img src="img\geografia.jpeg" alt="Geografia"></a>
+        <a href="\fisica"> <img src="img\fisica.jpeg" alt="Física"></a>
+        <a href="\quimica"> <img src="img\quimica.jpeg" alt="Química"></a>
+        <a href="\biologia"> <img src="img\biologia.jpeg" alt="Biologia"></a>
+        <a href="\filosofia"> <img src="img\filosofia.jpeg" alt="Filosofia"></a>
+        <a href="\sociologia"> <img src="img\sociologia.jpeg" alt="Sociologia"></a>
+      </section>
+    
+    @else
       <section id="materias">
         <h2>Escolha a disciplina e veja os assuntos mais cobrados no ENEM e SSA.</h2>
         <a href="\login"> <img src="\img\matematica.jpeg" alt="Matemática"></a>
@@ -63,6 +89,7 @@
         <a href="\login"> <img src="img\filosofia.jpeg" alt="Filosofia"></a>
         <a href="\login"> <img src="img\sociologia.jpeg" alt="Sociologia"></a>
       </section>
+      @endif
 
       <section id="contato">
         <h2>Contato: </h2>
@@ -86,5 +113,6 @@
       <footer>
         <a href="#topo">VOLTAR</a>
       </footer>
+  <script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>
